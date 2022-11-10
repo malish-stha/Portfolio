@@ -1,0 +1,432 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+a,button{
+    cursor: pointer;
+}
+
+/* Button */
+section#home a{
+    right: 400px;
+    top: 150px;
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 2px;
+    font-size: 1.8rem;
+    transition: 0.5s;
+    /* background: border-box; */
+    /* background-color: black; */
+}
+
+section#home a:hover{
+    color: white;
+}
+section#home a span{
+    display: block;
+    position: absolute;
+    background-color: white;
+}
+/* span1 */
+section#home a span:nth-child(1){
+    left: 0;
+    bottom: 0;
+    width: 3px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+    transition-delay: 0.3s;
+}
+section#home a:hover span:nth-child(1){
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+    transition-delay: 0.3s;
+}
+/* span2 */
+section#home a span:nth-child(2){
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    transition-delay: 0.3s;
+}
+section#home a:hover span:nth-child(2){
+    transform: scaleY(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+    transition-delay: 0.3s;
+}
+/* span3 */
+section#home a span:nth-child(3){
+    right: 0;
+    bottom: 0;
+    width: 3px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+    transition-delay: 0.3s;
+}
+section#home a:hover span:nth-child(3){
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+    transition-delay: 0.3s;
+}
+/* span4 */
+section#home a span:nth-child(4){
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 3px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    transition-delay: 0.3s;
+}
+section#home a:hover span:nth-child(4){
+    transform: scaleY(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+    transition-delay: 0.3s;
+}
+nav{
+    position: absolute;
+    top: 300px;
+    right: 50px;
+    width: 250px;
+    font-size: 30px;
+}
+
+.navigation{
+    position: fixed;
+    right: -500px;
+    width: 300px;
+    height: 100%;
+    background-color: #587572;
+    transition: .5s;
+}
+
+.navigation ul li{
+    text-align: right;
+    text-transform: uppercase;
+    list-style-type: none;
+    font-size: 1.5rem;
+    /* padding: 20px 30px; */
+    padding: 40px;
+}
+
+.navigation ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+.navigation ul li a:hover{
+    color: #344242;
+}
+
+.hamburger, .bar{
+    position: fixed;
+}
+
+.hamburger{
+    display: block;
+    top: 5%;
+    left: 95%;
+    width: 30px;
+    height: 30px;
+    transform: translateY(-50%);
+    border: 0;
+    background: 0 0;
+}
+
+.bar{
+    top: 3px;
+    background: #B29E83;
+    width: 100%;
+    height: 5px;
+    transition: all .3s ease-in;
+}
+
+#bar2{
+    top: 11px;
+}
+
+#bar3{
+    top: 19px;
+}
+
+.navigation.active{
+    right: 0;
+}
+
+.hamburger.open #bar1{
+    background-color: #fff;
+    transform: rotate(45deg) translate(6px, 5px);
+}
+
+.hamburger.open #bar2{
+    background-color: transparent;
+}
+
+.hamburger.open #bar3{
+    background-color: #fff;
+    transform: rotate(-45deg) translate(6px, -5px);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+  
+section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("assets/1.jpg") no-repeat center / 120%;
+    color: #fff;
+    font-size: 5rem;
+    font-family: "Gochi Hand", cursive;
+    scroll-snap-align: center;
+}
+section#home p{
+    position: relative;
+    left: 250px;
+}
+section#contact p{
+    position: relative;
+    top: -50px;
+    left: 500px;
+}
+section#skill {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("assets/2.jpg") no-repeat center / 120%;
+    color: #fff;
+    font-size: 5rem;
+    font-family: "Gochi Hand", cursive;
+}
+
+.skills{
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.skill-name{
+  font-size: 18px;
+  font-weight: 700;
+  color: #f1f1f1;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+.skill-bar{
+  height: 14px;
+  background: #282828;
+  border-radius: 3px;
+}
+
+.skill-per{
+  height: 14px;
+  background: #d13639;
+  border-radius: 3px;
+  position: relative;
+  animation: fillBars 2.5s 1;
+}
+
+.skill-per::before{
+  content: attr(per);
+  position: absolute;
+  padding: 4px 6px;
+  background: #f1f1f1;
+  border-radius: 4px;
+  font-size: 12px;
+  top: -35px;
+  right: 0;
+  transform: translateX(50%);
+}
+
+.skill-per::after{
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #f1f1f1;
+  top: -20px;
+  right: 0;
+  transform: translateX(50%) rotate(45deg);
+  border-radius: 2px;
+}
+
+@keyframes fillBars{
+  from{
+    width: 0;
+  }
+  to{
+    width: 100%;
+  }
+}
+
+
+section#project {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("assets/3.jpg") no-repeat center / 120%;
+    color: #fff;
+    font-size: 5rem;
+    font-family: "Gochi Hand", cursive;
+}
+section#contact {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("assets/4.jpg") no-repeat center / 120%;
+    color: #fff;
+    font-size: 5rem;
+    font-family: "Gochi Hand", cursive;
+}
+
+.container {
+    top: 150px;
+    right: 250px;
+    width: 800px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .card {
+    position: relative;
+    border-radius: 10px;
+}
+
+.container .card .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: #f00; */
+    transition: 0.7s;
+    z-index: 1;
+}
+
+.container .card:nth-child(1) .icon {
+    background: #e07768;
+    border-radius: 10%;
+}
+
+.container .card:nth-child(2) .icon {
+    background: #6eadd4;
+    border-radius: 10%;
+}
+
+.container .card:nth-child(3) .icon {
+    background: #4aada9;
+    border-radius: 10%;
+}
+
+
+.container .card .icon .fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.7s;
+    color: #fff;
+}
+
+i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.7s;
+    color: #fff;
+}
+
+.container .card .face {
+    width: 200px;
+    height: 150px;
+    transition: 0.5s;
+}
+
+.container .card .face.face1 {
+    position: relative;
+    /* background: #333; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(20px);
+}
+
+.container .card:hover .face.face1{
+    transform: translateY(0px);
+}
+
+.container .card .face.face1 .content {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.container .card:hover .face.face1 .content {
+    opacity: 1;
+}
+
+.container .card .face.face1 .content i{
+    max-width: 100px;
+}
+
+
+@media(max-width:1800px){
+    /* .container{
+        visibility: hidden;
+    } */
+
+    section#project {
+        background: url("assets/3.jpg");
+        background-repeat: inherit;
+        color: #fff;
+        font-size: 5rem;
+        font-family: "Gochi Hand", cursive;
+    }
+    section#contact {
+        
+        background: url("assets/4.jpg");
+        background-repeat: inherit;
+        color: #fff;
+        font-size: 5rem;
+        font-family: "Gochi Hand", cursive;
+    }
+}
